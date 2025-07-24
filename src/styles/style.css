@@ -1,0 +1,154 @@
+/* базовые стили и Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  background: url("img/i.jpg") no-repeat center center/cover; /* Можно заменить или убрать */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* контейнер */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(247, 248, 244, 0.95);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #160104;
+}
+
+/* Ввод и кнопки */
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  flex: 1;
+  min-width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+/* Кнопка добавления */
+.btn-primary {
+  padding: 10px 15px;
+  background-color: #8a6944;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #7b5f3d;
+}
+
+/* Список встреч */
+.meeting-list {
+  list-style: none;
+}
+
+.meeting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.meeting-item.completed .meeting-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.meeting-item:hover {
+  background: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+/* Текст встречи при выполнении */
+.meeting-text {
+  font-size: 16px;
+}
+
+.meeting-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Кнопки внутри списка */
+.meeting-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: color 0.2s;
+}
+
+.meeting-item button:hover {
+  color: #e74c3c;
+}
+
+/* Фильтры и управление */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.filters button {
+  background: transparent;
+  border: none;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(131, 64, 64);
+  transition: background 0.2s, color 0.2s;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+/* Кнопка очистки завершенных */
+#clearCompleted {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  transition: text-decoration 0.2s;
+}
+
+#clearCompleted:hover {
+  text-decoration: underline;
+}
